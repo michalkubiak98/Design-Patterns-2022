@@ -1,6 +1,4 @@
-package view;
-
-import model.Bid;
+package model;
 
 public interface Observer {
 	void update(Bid bid);

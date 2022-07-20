@@ -1,7 +1,5 @@
 package model;
 
-import view.Observer;
-
 public interface Subject {
 	void addObserver(Observer observer);
 

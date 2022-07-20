@@ -1,19 +1,11 @@
 package model;
 import java.text.NumberFormat;
 
-import view.Bidder;
-import view.Observer;
-
-/**
- * Bid.java
- *
- * A bid for the auction.
- */
 
 public class Bid {
 
-	private Observer bidder;
-	private double amount;
+	private final Observer bidder;
+	private final double amount;
 
 	public Bid(Observer bidder, double amount) {
 		this.bidder = bidder;
