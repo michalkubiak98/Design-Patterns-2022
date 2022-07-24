@@ -1,5 +1,5 @@
 package model;
-// Singleton Pattern is implemented
+
 public class AuctionManager {
 
     private Auction auction;

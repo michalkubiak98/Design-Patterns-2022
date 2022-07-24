@@ -2,10 +2,10 @@ package model;
 
 import controller.BidderController;
 
-public class Bidder implements Observer{
+public abstract class Bidder implements Observer{
     private final String name;
     private final Auction auction;
-    private final BidderController con;
+    protected final BidderController con;
 
     public Bidder(String name, Auction auction) {
         this.name = name;
@@ -19,11 +19,6 @@ public class Bidder implements Observer{
 
     public Auction getAuction() {
         return auction;
-    }
-
-    @Override
-    public void update(Bid newState) {
-        con.display(newState);
     }
 
     public void displayEntry(Observer b) {

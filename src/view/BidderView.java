@@ -78,9 +78,9 @@ public class BidderView extends JFrame {
         withdrawButton.setEnabled(true);
     }
 
-	public void disableBid() {
-		enterButton.setEnabled(true);
-		bidButton.setEnabled(false);
-		withdrawButton.setEnabled(false);
-	}
+    public void disableBid() {
+        enterButton.setEnabled(true);
+        bidButton.setEnabled(false);
+        withdrawButton.setEnabled(false);
+    }
 }

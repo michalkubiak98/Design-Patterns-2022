@@ -68,8 +68,8 @@ public class BidderController implements ActionListener {
         view.disableBid();
     }
 
-    public void display(Bid latestBid) {
-        view.display("The latest bid is " + latestBid + "\n");
+    public void display(String latestBid) {
+        view.display(latestBid);
     }
 
     public void displayEntry(Observer b) {

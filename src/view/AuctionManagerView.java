@@ -10,7 +10,8 @@ public class AuctionManagerView extends JFrame {
     @Serial
     private static final long serialVersionUID = 1L;
     private final JButton launchButton;
-    private final JButton addBidderButton;
+    private final JButton addVIPBidderButton;
+    private final JButton addNormalBidderButton;
     private final JButton closeAuctionButton;
 
     public AuctionManagerView() {
@@ -19,14 +20,18 @@ public class AuctionManagerView extends JFrame {
         JPanel panel = new JPanel(new FlowLayout());
         launchButton = new JButton("Launch Auction");
         panel.add(launchButton);
-        addBidderButton = new JButton("Add Bidder");
-        panel.add(addBidderButton);
-        addBidderButton.setEnabled(false);
+        addVIPBidderButton = new JButton("Add VIP Bidder");
+        panel.add(addVIPBidderButton);
+        addVIPBidderButton.setEnabled(false);
+        addNormalBidderButton = new JButton("Add Normal Bidder");
+        panel.add(addNormalBidderButton);
+        addNormalBidderButton.setEnabled(false);
         closeAuctionButton = new JButton("Close Auction");
         panel.add(closeAuctionButton);
         closeAuctionButton.setEnabled(false);
         launchButton.addActionListener(con);
-        addBidderButton.addActionListener(con);
+        addNormalBidderButton.addActionListener(con);
+        addVIPBidderButton.addActionListener(con);
         closeAuctionButton.addActionListener(con);
         add(panel);
     }
@@ -35,8 +40,12 @@ public class AuctionManagerView extends JFrame {
         return launchButton;
     }
 
-    public JButton getAddBidderButton() {
-        return addBidderButton;
+    public JButton getAddNormalBidderButton() {
+        return addNormalBidderButton;
+    }
+
+    public JButton getAddVIPBidderButton() {
+        return addVIPBidderButton;
     }
 
     public JButton getCloseAuctionButton() {
