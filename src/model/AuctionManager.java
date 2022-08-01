@@ -29,4 +29,6 @@ public class AuctionManager {
     public void setAuctionLaunched(boolean auctionLaunched) {
         this.auctionLaunched = auctionLaunched;
     }
+
+
 }

@@ -14,10 +14,12 @@ public class AuctionController implements ActionListener {
 	private Auction auction;
 	private final AuctionManager manager;
 	private final AuctionManagerView view;
+	private final BidderFactory factory;
 
 	public AuctionController(AuctionManagerView manager) {
 		this.manager = AuctionManager.getManager();
 		this.view = manager;
+		factory = new BidderFactory();
 
 	}
 
@@ -27,11 +29,16 @@ public class AuctionController implements ActionListener {
 		if (button.equals(view.getLaunchButton()))
 			launchButton(0);
 		else if (button.equals(view.getAddNormalBidderButton()))
-			addNormalBidder();
+			addBidder("Normal");
 		else if (button.equals(view.getAddVIPBidderButton()))
-			addVIPBidder();
+			addBidder("VIP");
 		else if (button.equals(view.getCloseAuctionButton()))
 			close();
+	}
+
+	private void addBidder(String type) {
+		String bidderName = JOptionPane.showInputDialog(view, "Enter name of the factory:");
+		auction.addObserver(factory.getBidder(type, bidderName, auction));
 	}
 
 	private void close() {
@@ -40,16 +47,6 @@ public class AuctionController implements ActionListener {
 		view.getAddVIPBidderButton().setEnabled(false);
 		view.getCloseAuctionButton().setEnabled(false);
 		auction.closeAuction();
-	}
-
-	private void addNormalBidder() {
-		String bidderName = JOptionPane.showInputDialog(view, "Enter name of the bidder:");
-		auction.addObserver(new NormalBidder(bidderName, auction));
-	}
-
-	private void addVIPBidder() {
-		String bidderName = JOptionPane.showInputDialog(view, "Enter name of the bidder:");
-		auction.addObserver(new VIPBidder(bidderName, auction));
 	}
 
 	private void launchButton(int count) {
@@ -75,54 +72,3 @@ public class AuctionController implements ActionListener {
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-Bidder -> Normal Bidders and a VIP Bidder
-
-the process of bidding was same like for both boidder
-they wil bid and the bidding amount will be passed to auction and other function will be done
-
- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

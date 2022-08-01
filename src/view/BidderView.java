@@ -10,7 +10,6 @@ import java.awt.event.ActionListener;
 
 /**
  * Bidder.java
- * <p>
  * Bidders to the auction. They register themselves with the auction so that
  * they are notified when the state of the auction has changed. (i.e. someone
  * has put out a higher bid)
