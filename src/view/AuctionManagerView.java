@@ -52,4 +52,17 @@ public class AuctionManagerView extends JFrame {
         return closeAuctionButton;
     }
 
+    public void launch() {
+        launchButton.setEnabled(false);
+        addNormalBidderButton.setEnabled(true);
+        addVIPBidderButton.setEnabled(true);
+        closeAuctionButton.setEnabled(true);
+    }
+
+    public void close() {
+        launchButton.setEnabled(true);
+        addNormalBidderButton.setEnabled(false);
+        addVIPBidderButton.setEnabled(false);
+        closeAuctionButton.setEnabled(false);
+    }
 }

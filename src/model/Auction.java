@@ -96,9 +96,9 @@ public class Auction implements Subject {
 
     @Override
     public void notifyObeserver() {
-        for (Observer bdr : birders) {
-            bdr.update(currentHigh);
-        }
+		for (Observer bdr : birders) {
+			bdr.update(currentHigh);
+		}
     }
 
     @Override

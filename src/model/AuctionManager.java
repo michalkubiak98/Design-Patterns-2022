@@ -5,6 +5,7 @@ public class AuctionManager {
     private Auction auction;
     private boolean auctionLaunched = false;
     private static AuctionManager manager;
+    private Command command;
 
     private AuctionManager(){}
 
@@ -30,5 +31,11 @@ public class AuctionManager {
         this.auctionLaunched = auctionLaunched;
     }
 
+    public void execute(){
+        command.executeCommand();
+    }
 
+    public void setCommand(Command command) {
+        this.command = command;
+    }
 }
