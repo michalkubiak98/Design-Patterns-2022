@@ -1,0 +1,35 @@
+commit e689daa778b844d61091e7479d0828b9e00e3772
+Author: Michal Kubiak <michalkubiak@globalreachtech.com>
+Date:   Sat Aug 6 17:02:23 2022 +0100
+
+    Command Pattern Design Pattern Implemented
+
+commit f268923cf6d271f79e7236d03c40cdfa783734c2
+Author: Michal Kubiak <michalkubiak@globalreachtech.com>
+Date:   Mon Aug 1 20:52:24 2022 +0100
+
+    Factory Design Pattern implemented
+
+commit 43af2477dec7e171933209a472dacdb7712c8323
+Author: Michal Kubiak <michalkubiak@globalreachtech.com>
+Date:   Sun Jul 24 16:44:32 2022 +0100
+
+    Template Design Pattern implemented
+
+commit 3d9c6ccc26e897282913b09f0d537d7db0bf33dd
+Author: Michal Kubiak <55451754+michalkubiak98@users.noreply.github.com>
+Date:   Wed Jul 20 20:25:09 2022 +0100
+
+    Create README.md
+
+commit 27afa5a9bc1e12ea2c15594a5b657c1671c295a6
+Author: Michal Kubiak <michalkubiak@globalreachtech.com>
+Date:   Wed Jul 20 20:18:30 2022 +0100
+
+    Singleton Design Pattern Implemented
+
+commit abcb482aa8c4fb158644cfd8eed1f5fb539d5ad0
+Author: michal <Michalpkubiak@gmail.com>
+Date:   Sun Jul 3 16:28:56 2022 +0100
+
+    Observer Design Pattern
